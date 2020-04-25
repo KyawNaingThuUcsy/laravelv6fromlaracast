@@ -1,0 +1,3 @@
+This repo was created for me from laracast v6 scratch.
+You can freely clone this repo to learn.
+Peace...
