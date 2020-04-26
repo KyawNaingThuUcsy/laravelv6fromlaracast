@@ -11,3 +11,15 @@ $user = App\User::find(1);
 $user->articles;
 
 $article = App\Article::find(1)->user;
+
+==========================================
+Many To Many
+
+* Need To add required rows in database. Episode 31
+
+$article = App\Article::first();
+$article->tags;
+$article->tags->pluck('name');
+
+$tag = App\Tag::first();
+$tag->articles;

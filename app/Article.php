@@ -21,4 +21,13 @@ class Article extends Model
     // {
     //     return $this->belongsTo(User::class,'user_id'); 
     // }
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
 }
+// an article has many tags
+// tag belongs to an article
+
+// learn Laravel
+// php,laravel, work,education
