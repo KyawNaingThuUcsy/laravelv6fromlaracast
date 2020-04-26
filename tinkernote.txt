@@ -1,0 +1,13 @@
+php artisan tinker
+
+factory(App\User::class,2)->create();
+
+php artisan make:factory ArticleFactory -m "App\Article"
+
+factory(App\Article::class,5)->create();
+factory(App\Article::class,5)->create(['title'=>'Override the title']);
+
+$user = App\User::find(1);
+$user->articles;
+
+$article = App\Article::find(1)->user;
