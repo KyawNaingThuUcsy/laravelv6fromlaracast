@@ -22,6 +22,19 @@
                     </div>
                 </div>
                 <div class="field">
+                    <label for="" class="label">Tags</label>
+                    <div class="control">
+                        <select name="tags[]" id="" class="select is-multiple control" multiple>
+                            @foreach ($tags as $tag)
+                                <option value="{{ $tag->id }}">{{$tag->name}}</option>
+                            @endforeach
+                        </select>
+                        @error('tags')
+                        <p class="help is-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+                </div>
+                <div class="field">
                     <label for="" class="label">Excerpt</label>
                     <div class="control">
                         <textarea name="excerpt" class="textarea @error('excerpt') is-danger @enderror">{{ old('excerpt') }}</textarea>

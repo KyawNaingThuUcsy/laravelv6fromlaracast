@@ -23,3 +23,18 @@ $article->tags->pluck('name');
 
 $tag = App\Tag::first();
 $tag->articles;
+
+===========================================
+Episode 33 Note
+
+$article->tags()->attach(1);
+$article->tags()->attach([1,2]);
+$article->tags()->detach(1);
+$article->tags()->detach(2);
+
+$tag = App\Tag::find(1);
+$article->tags()->attach($tag);
+
+$tag = App\Tag::findMany([1,2]);
+$article->tags()->attach($tag);
+
